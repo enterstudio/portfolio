@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>{{ project.title }}</h2>
+<p><strong>Created: </strong> {{ project.created }} </p>
+<p><strong>Updated: </strong> {{ project.updated }} </p>
+
+<p>
+{{ project.description }}
+</p>
+{% endblock %}

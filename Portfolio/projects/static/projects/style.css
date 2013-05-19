@@ -1,0 +1,77 @@
+@CHARSET "UTF-8";
+
+
+body, html {
+	margin: 0px;
+	padding: 0px;
+}
+
+
+
+header {
+	background-color: black;
+	padding: 20px;
+}
+
+header a,header p,header h1 {
+	color: white;
+}
+
+body {
+	background: #BBBBBB;
+}
+
+#wrapper {
+
+}
+
+#content_wrapper {
+	margin: 20px;
+}
+
+#content {
+	margin: auto;
+	padding: 20px;
+	background: #FFFFFF;
+	float: left;
+	width: 60%;
+}
+
+#sidebar {
+	
+}
+
+#top_sidebar {
+	background-color: white;
+}
+
+#bottom_sidebar {
+	background-color: white;
+}
+
+footer {
+	background-color: black;
+	position: fixed;
+	bottom: 0px;
+	padding: 10px;
+	margin: 0px;
+	width: 100%;
+}
+
+footer a,footer p,footer h1 {
+	color: white;
+	
+}
+
+
+
+h1 {
+	-webkit-margin-before: 0em;
+	-webkit-margin-after: 0em;
+}
+
+p {
+	-webkit-margin-before: 0em;
+}
+
+/* fix Django presets? */

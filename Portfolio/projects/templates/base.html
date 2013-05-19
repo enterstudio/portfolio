@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	{% load staticfiles %}
+		<link rel="stylesheet" type="text/css" href="{% static 'projects/style.css' %}" />
+	</head>
+	<div id="wrapper">
+	<header>
+		<h1>Development Portfolio</h1>
+		<p>by John Wnek</p>
+		<a href="/">Home</a>
+		<a href="{% url 'projects' %}">Portfolio</a>
+		<a href="{% url 'posts' %}">Dev Log</a>
+	</header>
+	<body>
+	<div id="content_wrapper">
+		<div id="content">
+		{% block content %}{% endblock %}
+		</div>
+		<div id="sidebar">
+			<div id="top_sidebar">
+			{% block top_sidebar %}{% endblock %}
+			</div>
+			<div id="bottom_sidebar">
+			{% block bottom_sidebar %}{% endblock %}
+			</div>
+		</div>
+	</div>		
+	</body>
+	<footer>
+	<p>Contact Me</p>
+	</footer>
+	</div>
+</html>
