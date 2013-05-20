@@ -3,14 +3,18 @@
 	<head>
 	{% load staticfiles %}
 		<link rel="stylesheet" type="text/css" href="{% static 'projects/style.css' %}" />
+		<link href="http://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet" type="text/css" />
+		<link href="http://fonts.googleapis.com/css?family=Carrois+Gothic+SC" rel="stylesheet" type="text/css" />
 	</head>
 	<div id="wrapper">
 	<header>
+		<div id="header">
 		<h1>Development Portfolio</h1>
-		<p>by John Wnek</p>
-		<a href="/">Home</a>
-		<a href="{% url 'projects' %}">Portfolio</a>
-		<a href="{% url 'posts' %}">Dev Log</a>
+		<p><strong>by John Wnek</strong></p>
+		<a href="/">home</a>  |    
+		<a href="{% url 'projects' %}">portfolio</a>  |   
+		<a href="{% url 'posts' %}">dev log</a>
+		</div>
 	</header>
 	<body>
 	<div id="content_wrapper">
@@ -28,7 +32,9 @@
 	</div>		
 	</body>
 	<footer>
-	<p>Contact Me</p>
+	<div id="footer">
+		<p>Contact Me</p>
+	</p>
 	</footer>
 	</div>
 </html>

@@ -5,7 +5,9 @@ from django.shortcuts import render, get_object_or_404
 from projects.models import Project, Post
 
 def index(request):
-    context = {}
+    project_list = Project.objects.all().order_by('updated')[:5]
+    post_list = Post.objects.all().order_by('updated')[:5]
+    context = {'project_list': project_list, 'post_list': post_list}
     return render(request, 'home.html', context)
 
 def projects(request):

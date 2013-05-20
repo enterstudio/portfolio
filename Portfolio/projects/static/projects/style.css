@@ -6,15 +6,38 @@ body, html {
 	padding: 0px;
 }
 
-
+html {
+	height:auto;
+}
 
 header {
 	background-color: black;
 	padding: 20px;
+	width: 100%;
+	left: 0;
+	position: fixed;
+}
+
+#header {
+	width: 960px;
+	margin: auto;
 }
 
 header a,header p,header h1 {
 	color: white;
+}
+
+header a {
+	font-family: 'Carrois Gothic SC', sans-serif;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+header a:hover {
+	font-family: 'Carrois Gothic SC', sans-serif;
+	text-decoration: none;
+	font-weight: bold;
+	color: #888888;
 }
 
 body {
@@ -22,11 +45,16 @@ body {
 }
 
 #wrapper {
-
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	
 }
 
 #content_wrapper {
-	margin: 20px;
+	margin: 0px;
+	/* Places body content below header */
+	padding: 160px 23px 0px 23px;
 }
 
 #content {
@@ -34,44 +62,67 @@ body {
 	padding: 20px;
 	background: #FFFFFF;
 	float: left;
-	width: 60%;
+	width: 550px;
+	box-shadow: 5px 5px #888888;
 }
 
 #sidebar {
-	
+	width: 300px;
+	padding-left: 626px;
 }
 
 #top_sidebar {
 	background-color: white;
+	padding: 10px;
+	margin-bottom: 10px;
+	box-shadow: 5px 5px #888888;
 }
 
 #bottom_sidebar {
 	background-color: white;
+	padding: 10px;
+	box-shadow: 5px 5px #888888;
 }
 
 footer {
 	background-color: black;
 	position: fixed;
 	bottom: 0px;
-	padding: 10px;
+	left: 0px;
+	padding: 24px;
 	margin: 0px;
 	width: 100%;
 }
 
+#footer {
+	width: 960px;
+	margin: auto;
+}
+
 footer a,footer p,footer h1 {
 	color: white;
-	
 }
 
 
+/* fix Django presets? */
+h1, h2, h3 {
+	-webkit-margin-before: 0em;
+	-webkit-margin-after: 5px;
+	font-family: 'Roboto Slab', serif;
+}
 
 h1 {
-	-webkit-margin-before: 0em;
-	-webkit-margin-after: 0em;
+	font-size: 24px;
+}
+
+h2 {
+	font-size: 20px;
 }
 
 p {
 	-webkit-margin-before: 0em;
+	font-family: arial;
+	font-size: 14px;
 }
 
-/* fix Django presets? */
+
