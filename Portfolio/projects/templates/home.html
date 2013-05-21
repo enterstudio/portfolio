@@ -1,33 +1,7 @@
-{% extends "base.html" %}
+{% extends "base_sidebar.html" %}
 
 {% block content %}
 	<h2>Welcome</h2>
 	<p>This site is a portfolio of various programming and development 
 	projects I am working on.  </p>
-{% endblock %}
-
-{% block top_sidebar %}
-	<h3>Recent Posts</h3>
-	{% if post_list %}
-		<ul>
-			{% for post in post_list %}
-				<li><a href="{% url 'post_detail' post.id %}">{{ post.title }}</a></li>
-			{% endfor %}	
-		</ul>
-	{% else %}
-		<p>No posts available</p>
-	{% endif %}
-{% endblock %}
-
-{% block bottom_sidebar %}
-	<h3>Project Updates</h3>
-	{% if project_list %}
-		<ul>
-			{% for project in project_list %}
-				<li><a href="{% url 'project_detail' project.id %}">{{ project.title }}</a></li>
-			{% endfor %}	
-		</ul>
-	{% else %}
-		<p>No projects available</p>
-	{% endif %}
 {% endblock %}

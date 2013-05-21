@@ -23,22 +23,33 @@ header {
 	margin: auto;
 }
 
-header a,header p,header h1 {
+header a,header p,header h1, footer p, footer a, footer h1 {
 	color: white;
 }
 
-header a {
+body a {
 	font-family: 'Carrois Gothic SC', sans-serif;
 	text-decoration: none;
 	font-weight: bold;
+	text-transform: lowercase;
 }
 
-header a:hover {
+#content_wrapper a:hover {
+	font-family: 'Carrois Gothic SC', sans-serif;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: lowercase;
+	color: red;
+}
+
+header a:hover, footer a:hover {
 	font-family: 'Carrois Gothic SC', sans-serif;
 	text-decoration: none;
 	font-weight: bold;
 	color: #888888;
 }
+
+
 
 body {
 	background: #BBBBBB;
@@ -54,7 +65,7 @@ body {
 #content_wrapper {
 	margin: 0px;
 	/* Places body content below header */
-	padding: 160px 23px 0px 23px;
+	padding: 160px 23px 110px 23px;
 }
 
 #content {
@@ -89,7 +100,7 @@ footer {
 	position: fixed;
 	bottom: 0px;
 	left: 0px;
-	padding: 24px;
+	padding: 24px 24px 0px 24px;
 	margin: 0px;
 	width: 100%;
 }
@@ -97,10 +108,6 @@ footer {
 #footer {
 	width: 960px;
 	margin: auto;
-}
-
-footer a,footer p,footer h1 {
-	color: white;
 }
 
 
