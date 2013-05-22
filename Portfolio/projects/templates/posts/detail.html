@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>{{ post.title }}</h2>
+<p><strong>Created: </strong> {{ post.created }} </p>
+<p><strong>Updated: </strong> {{ post.updated }} </p>
+<p>
+{{ post.content }}
+</p>
+{% endblock %}
+
+{% block top_sidebar %}
+	<h3>Related Project Info</h3>
+	<a href="{% url 'project_detail' project.id %}">{{ project.title }}</a>
+	<p>Started: {{ project.created }} </p>
+	<p>Updated: {{ project.updated }} </p>
+	<p>GitHub: <a href="{{ project.github_link }}">{{ project.title }}</a></p>
+	<p>Demo: <a href="{{ project.live_link }}">{{ project.title }}</a></p>	
+
+{% endblock %}
+
+{% block bottom_sidebar %}
+	<h3>Related Posts</h3>
+	{% if posts_list %}
+			{% for post in posts_list %}
+				<a href="{% url 'post_detail' post.id %}">{{ post.title }}</a>
+				<p>Published: {{ post.created }} </p>
+			{% endfor %}	
+	{% else %}
+		<p>No projects available</p>
+	{% endif %}
+{% endblock %}
