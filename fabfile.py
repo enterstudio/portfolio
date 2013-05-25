@@ -10,7 +10,7 @@ def update_project():
         '''Pulls master from github, updates python and env
         '''
         with cd ('/home/john/production/portfolio'):
-            run('git pull')
+            sudo('git pull')
             with prefix('source /home/john/env/bin/activate'):
                 # have to fix import on production.txt, change when fixed
                 run('pip install -r requirements/base.txt')
