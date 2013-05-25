@@ -3,8 +3,8 @@
 
 from fabric.api import *
 
-env.hosts = ['dev.indratech.net']
-env.user = ['john']
+#env.hosts = ['dev.indratech.net']
+#env.user = ['john']
 
 def update_project():
         '''Pulls master from github, updates python and env
