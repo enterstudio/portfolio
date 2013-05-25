@@ -15,6 +15,7 @@ config.readfp(open('/home/john/key_config/keys.cfg'))
 #SECRET_KEY = 'mv845jh5498gfhKHGBN6hnuyN'
 
 SECRET_KEY = config.get('secret', 'key')
+dbkey = config.get('db', 'key')
 
 DATABASES = {
     'default': {
@@ -22,7 +23,7 @@ DATABASES = {
         'NAME': 'portfolio_db',                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': 'portfolio',
-        'PASSWORD': config.get('db', 'key'),
+        'PASSWORD': dbkey,
         'HOST': '127.0.0.1',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
         'PORT': '',                      # Set to empty string for default.
     }
