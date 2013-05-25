@@ -15,11 +15,11 @@ def update_project():
                 # have to fix import on production.txt, change when fixed
                 run('pip install -r requirements/base.txt')
                 #run syncdb with production settings
-                run ('python Portfolio/manage.py syncdb --settings=Portfolio.settings.production')
+                run('python Portfolio/manage.py syncdb --settings=Portfolio.settings.production')
                 #South migration with production settings
-                run ('python Portfolio/manage.py migrate --settings=Portfolio.settings.production')
+                run('python Portfolio/manage.py migrate --settings=Portfolio.settings.production')
                 #Collect static files into static root
-                run ('python Portfolio/manage.py collectstatic --settings=Portfolio.settings.production')
+                sudo('python Portfolio/manage.py collectstatic --settings=Portfolio.settings.production')
 
 def restart_servers():
     '''restarts nginx an uWSGI
