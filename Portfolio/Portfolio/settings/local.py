@@ -1,9 +1,13 @@
 # settings/local.py
 from .base import *
 import os
+import ConfigParser
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
+
+config = ConfigParser.ConfigParser()
+config.readfp(open('/home/john/key_config/keys.cfg'))
 
 DATABASES = {
     'default': {
@@ -18,4 +22,5 @@ DATABASES = {
 }
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = os.environ['SECRETKEY']
+#SECRET_KEY = os.environ['SECRETKEY']
+SECRET_KEY = config.get('secret', 'key')
