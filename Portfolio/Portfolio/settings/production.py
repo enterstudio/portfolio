@@ -2,7 +2,7 @@ from .base import *
 import os
 import ConfigParser
 
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ALLOWED_HOSTS = ['dev.indratech.net']
