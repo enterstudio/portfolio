@@ -8,7 +8,7 @@ class Project(models.Model):
     title = models.CharField(max_length=200)
     slug = models.SlugField(max_length=100)
     summary = HTMLField()
-    description = HTMLField()
+    description = models.TextField()
     created = models.DateTimeField(db_index=True, auto_now_add=True)
     updated = models.DateTimeField(db_index=True)
     github_link = models.URLField(max_length=100, blank=True)

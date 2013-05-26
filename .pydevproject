@@ -20,5 +20,6 @@
 <path>/home/john/env/lib/python2.7/site-packages</path>
 <path>/home/john/env/local/lib/python2.7/site-packages</path>
 <path>/usr/local/lib/python2.7/dist-packages</path>
+<path>/home/john/env/lib/python2.7</path>
 </pydev_pathproperty>
 </pydev_project>

@@ -6,9 +6,9 @@ from projects.models import Post
 class PostAdmin(admin.ModelAdmin):
     fields = ['title', 'published', 'slug', 'project', 'updated', 'content' ]
 
-class ProjectAdmin(admin.ModelAdmin):
+class ProjectAdmin(FilePickerAdmin):
     fields = ['title', 'published', 'slug', 'updated', 'summary', 'description', 'github_link', 'live_link' ]
-    adminfiles_fields = ('description',)
+    adminfiles_fields = ('description', )
 
 
 admin.site.register(Project, ProjectAdmin)
