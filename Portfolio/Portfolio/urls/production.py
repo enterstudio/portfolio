@@ -18,7 +18,6 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'', include('projects.urls')),
     url(r'^tinymce/', include('tinymce.urls')),
-    url(r'^adminfiles/', include('adminfiles.urls')),
     url(r'^media/(?P<path>.*)$', 'django.views.static.serve',
                  {'document_root': Portfolio.settings.production.MEDIA_ROOT}),
 )
