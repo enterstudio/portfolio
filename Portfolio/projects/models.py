@@ -1,5 +1,6 @@
 from django.db import models
 from tinymce.models import HTMLField
+from filebrowser.fields import FileBrowseField
 import datetime
 from django.utils import timezone
 
@@ -7,6 +8,7 @@ from django.utils import timezone
 class Project(models.Model):
     title = models.CharField(max_length=200)
     slug = models.SlugField(max_length=100)
+    image = FileBrowseField("Image", max_length=200, directory="uploads/", extensions=[".jpg",".jpeg",".png"], blank=True, null=True)
     summary = HTMLField()
     description = models.TextField()
     created = models.DateTimeField(db_index=True, auto_now_add=True)

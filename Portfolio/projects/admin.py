@@ -6,7 +6,7 @@ class PostAdmin(admin.ModelAdmin):
     fields = ['title', 'published', 'slug', 'project', 'updated', 'content' ]
 
 class ProjectAdmin(admin.ModelAdmin):
-    fields = ['title', 'published', 'slug', 'updated', 'summary', 'description', 'github_link', 'live_link' ]
+    fields = ['title', 'published', 'slug', 'image', 'updated', 'summary', 'description', 'github_link', 'live_link' ]
 
 
 admin.site.register(Project, ProjectAdmin)
