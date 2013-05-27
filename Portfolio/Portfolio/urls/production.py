@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, include, url
 import Portfolio.settings.production
-
+from filebrowser.sites import site
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -18,6 +18,8 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'', include('projects.urls')),
     url(r'^tinymce/', include('tinymce.urls')),
+    url(r'^filebrowser/', include(site.urls)),
+    url(r'^grappelli/', include('grappelli.urls')),
     url(r'^media/(?P<path>.*)$', 'django.views.static.serve',
                  {'document_root': Portfolio.settings.production.MEDIA_ROOT}),
 )
