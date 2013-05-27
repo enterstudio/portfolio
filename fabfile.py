@@ -3,7 +3,7 @@
 
 from fabric.api import *
 
-#env.hosts = ['dev.indratech.net']
+env.hosts = ['127.0.0.1']
 #env.user = ['john']
 
 def update_project():
