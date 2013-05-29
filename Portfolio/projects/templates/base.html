@@ -4,18 +4,27 @@
 	<head>
 	{% load staticfiles %}
 		<link rel="stylesheet" type="text/css" href="{% static 'projects/style.css' %}" />
-		<link href="http://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet" type="text/css" />
-		<link href="http://fonts.googleapis.com/css?family=Carrois+Gothic+SC" rel="stylesheet" type="text/css" />
+		<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
 	</head>
 	<div id="wrapper">
 	<header>
 		<div id="header">
-		<h1>Development Portfolio</h1>
-		<p><strong>by John Wnek</strong></p>
-		<a href="/">home</a>  |    
-		<a href="{% url 'projects' %}">portfolio</a>  |   
-		<a href="{% url 'posts' %}">dev log</a>
-		<a href="https://github.com/moskeyombus/"><img src="{{MEDIA_URL}}github.png" height="24px" width="24px" /></a>
+			<div id="header_left">
+				<h1>Development Portfolio</h1>
+				<p><strong>by John Wnek</strong></p>
+				<a href="/">home</a>  |    
+				<a href="{% url 'projects' %}">portfolio</a>  |   
+				<a href="{% url 'posts' %}">dev log</a> | 
+				<a href="http://www.indratech.net/dev/JohnWnekResume.pdf" target="_new">resume</a>
+			</div>
+			<div id="header_right">
+			
+				<p>John Wnek</p>
+				<a href="mailto:john.wnek@gmail.com">john.wnek@gmail.com</a>
+				
+			</div>
 		</div>
 	</header>
 	<body>
@@ -35,9 +44,15 @@
 	</body>
 	<footer>
 	<div id="footer">
-		<a href="/">home</a><br />   
-		<a href="{% url 'projects' %}">portfolio</a><br />
-		<a href="{% url 'posts' %}">dev log</a>
+		<div id="header_left">
+			<a href="/">home</a><br />   
+			<a href="{% url 'projects' %}">portfolio</a><br />
+			<a href="{% url 'posts' %}">dev log</a>
+		</div>
+		<div id="footer_right">
+			<a href="https://github.com/moskeyombus/" target="_new"><img src="{{MEDIA_URL}}github.png" /></a>
+				<a href="http://www.linkedin.com/pub/john-wnek/28/1b8/2b8" target="_new"><img src="{{MEDIA_URL}}linkedin.png" /></a>
+		</div>
 	</p>
 	</footer>
 	</div>

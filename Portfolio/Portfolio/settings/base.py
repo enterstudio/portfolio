@@ -37,6 +37,10 @@ USE_L10N = True
 USE_TZ = True
 
 
+#TinyMCE more options
+TINYMCE_DEFAULT_CONFIG = {
+'theme': "advanced",}
+
 # Additional locations of static files
 STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
