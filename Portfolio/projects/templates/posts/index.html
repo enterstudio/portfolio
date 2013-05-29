@@ -7,7 +7,7 @@
 		{% for post in posts_list %}
 			<a href="{% url 'post_detail' post.id %}">{{ post.title }}</a>
 			<p class="smalltext">posted {{ post.created }}</p>
-			<p>{{ post.content|slice:":100" }}...</p>
+			<p>{{ post.content|striptags|slice:":150" }}...</p>
 		{% endfor %}	
 	
 {% else %}
