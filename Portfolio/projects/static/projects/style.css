@@ -49,8 +49,7 @@ header {
 
 
 header a,header p,header h1, footer p, footer a, footer h1 {
-	color: white;
-	
+	color: white;	
 }
 
 body a {
@@ -137,17 +136,15 @@ body {
 	padding: 20px;
 	clear: both;
 	border-bottom: 2px dashed grey;
-	min-height: 150px;
+	min-height: 120px;
 }
 
 #summary_image {
-
 	width: 100px;
 	display: inline;
 	float: left;
 	clear:both;
 	padding-top: 8px;
-
 }
 
 #summary_content {
@@ -163,6 +160,7 @@ body {
 
 #project_info_img{
 	text-align: center;
+	padding-bottom: 20px;
 }
 
 #post_summary{
@@ -217,7 +215,11 @@ h2 {
 h3 {
 	font-size: 20px;
 	padding-bottom: 10px;
-	
+}
+
+h4 {
+	font-size: 18px;
+	padding-bottom: 10px;
 }
 
 p {
