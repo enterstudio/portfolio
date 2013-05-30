@@ -30,7 +30,7 @@ header {
 }
 
 #header {
-	width: 960px;
+	width: 1024px;
 	margin: auto;
 }
 
@@ -90,7 +90,7 @@ body {
 }
 
 #wrapper {
-	width: 960px;
+	width: 1024px;
 	margin-left: auto;
 	margin-right: auto;
 	
@@ -98,6 +98,7 @@ body {
 
 #content_wrapper {
 	margin: 0px;
+	width: 1024px;
 	/* Places body content below header */
 	padding: 160px 23px 130px 23px;
 	overflow: hidden;
@@ -108,13 +109,13 @@ body {
 	padding: 20px 20px 110px 20px;
 	background: #FFFFFF;
 	float: left;
-	width: 550px;
+	width: 644px;
 	box-shadow: 5px 5px #888888;
 }
 
 #sidebar {
 	width: 300px;
-	padding-left: 626px;
+	padding-left: 720px;
 }
 
 #top_sidebar {
@@ -132,7 +133,7 @@ body {
 
 
 #project_summary {
-	width: 500px;
+	width: 550px;
 	padding: 20px;
 	clear: both;
 	border-bottom: 2px dashed grey;
@@ -148,7 +149,7 @@ body {
 }
 
 #summary_content {
-	width: 370px;
+	width: 400px;
 	display: inline;
 	float: right;
 }
@@ -179,7 +180,7 @@ footer {
 }
 
 #footer {
-	width: 960px;
+	width: 1024px;
 	margin: auto;
 }
 
