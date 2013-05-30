@@ -1,13 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2>{{ project.title }}</h2>
-<p><strong>Created: </strong> {{ project.created }} </p>
-<p><strong>Updated: </strong> {{ project.updated }} </p>
-
-<p>
-{{ project.description }}
-</p>
+<div id="project_info">
+	<h2>{{ project.title }}</h2>
+		<div id="project_info_img">
+			<img src="{{MEDIA_URL}}{{ project.image }}" />
+		</div>
+	<p>
+	{{ project.description }}
+	</p>
+</div>
 {% endblock %}
 
 {% block top_sidebar %}

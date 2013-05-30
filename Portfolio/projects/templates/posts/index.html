@@ -1,16 +1,17 @@
 {% extends "base_sidebar.html" %}
 
 {% block content %}
-<h2>Dev Log</h2>
-{% if posts_list %}
-
+	<h2>Dev Log</h2>
+	{% if posts_list %}
 		{% for post in posts_list %}
-			<a href="{% url 'post_detail' post.id %}">{{ post.title }}</a>
-			<p class="smalltext">posted {{ post.created }}</p>
-			<p>{{ post.content|striptags|slice:":150" }}...</p>
+			<div id="post_summary">
+				<a href="{% url 'post_detail' post.id %}">{{ post.title }}</a>
+				<p class="smalltext">posted {{ post.created }}</p>
+				<p>{{ post.content|striptags|slice:":150" }}...</p>
+			</div>
 		{% endfor %}	
 	
-{% else %}
-	<p>No posts available</p>
-{% endif %}	
+	{% else %}
+		<p>No posts available</p>
+	{% endif %}	
 {% endblock %}	

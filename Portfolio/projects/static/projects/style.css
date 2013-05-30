@@ -86,7 +86,8 @@ header a:hover, footer a:hover {
 
 
 body {
-	background: #BBBBBB;
+	background-image:url('/media/bg.png');
+	background-repeat:repeat;
 }
 
 #wrapper {
@@ -135,7 +136,7 @@ body {
 	width: 500px;
 	padding: 20px;
 	clear: both;
-	border-bottom: 2px dotted grey;
+	border-bottom: 2px dashed grey;
 	min-height: 150px;
 }
 
@@ -145,7 +146,7 @@ body {
 	display: inline;
 	float: left;
 	clear:both;
-	padding-top: 40px;
+	padding-top: 8px;
 
 }
 
@@ -160,8 +161,14 @@ body {
 	width: 100px;	
 }
 
+#project_info_img{
+	text-align: center;
+}
 
-
+#post_summary{
+	padding: 20px 0px 20px 0px;
+	border-bottom: 2px dashed grey;
+}
 
 footer {
 	background-color: black;
@@ -199,11 +206,18 @@ h1, h2, h3 {
 }
 
 h1 {
-	font-size: 24px;
+	font-size: 28px;
 }
 
 h2 {
+	font-size: 24px;
+	padding-bottom: 10px;
+}
+
+h3 {
 	font-size: 20px;
+	padding-bottom: 10px;
+	
 }
 
 p {
