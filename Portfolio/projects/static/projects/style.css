@@ -162,7 +162,12 @@ body {
 #project_info_img{
 	text-align: center;
 	padding-bottom: 20px;
+	
+}
+
+#project_info_img img {
 	width: 500px;
+	
 }
 
 #projects-category-title {
