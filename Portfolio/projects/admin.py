@@ -1,14 +1,19 @@
 from django.contrib import admin
-from projects.models import Project
-from projects.models import Post
+from projects.models import Project, Post, Category, Tag
 
 class PostAdmin(admin.ModelAdmin):
-    fields = ['title', 'published', 'slug', 'project', 'updated', 'content' ]
+    fields = ['title', 'category', 'tags', 'published', 'slug', 'project', 'created', 'updated', 'content' ]
 
 class ProjectAdmin(admin.ModelAdmin):
-    fields = ['title', 'published', 'slug', 'image', 'updated', 'summary', 'description', 'github_link', 'live_link' ]
+    fields = ['title', 'category', 'tags', 'published', 'slug', 'image', 'created', 'updated', 'summary', 'description', 'github_link', 'live_link' ]
 
+class CategoryAdmin(admin.ModelAdmin):
+    fields = ['title', 'description']
+
+class TagAdmin(admin.ModelAdmin):
+    fields = ['title', 'description']
 
 admin.site.register(Project, ProjectAdmin)
 admin.site.register(Post, PostAdmin)
-
+admin.site.register(Category, CategoryAdmin)
+admin.site.register(Tag, TagAdmin)

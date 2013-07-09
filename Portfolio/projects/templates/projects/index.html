@@ -5,7 +5,10 @@
 	<h2>Portfolio</h2>
 	<p>Below is a list of my past and current programming projects.  Please 
 	click a project to see more detailed information</p>
+		<div id="projects-column">	
+		<div id="projects-category-title"><h3>Django Projects</h3></div>
 			{% for project in project_list %}
+			{% ifequal project.category.title "Django" %}
 			<div id="project_summary">
 				<div id="summary_image">
 					<a href="{% url 'project_detail' project.id %}"><img src="{{MEDIA_URL}}{{ project.image }}" /></a>
@@ -15,7 +18,25 @@
 					<p>{{ project.summary }}</p>
 				</div>
 			</div>	
-			{% endfor %}	
+			{% endifequal %}
+			{% endfor %}
+			
+		<div id="projects-category-title"><h3>WordPress Projects</h3></div>
+			{% for project in project_list %}
+			{% ifequal project.category.title "WordPress" %}
+			<div id="project_summary">
+				<div id="summary_image">
+					<a href="{% url 'project_detail' project.id %}"><img src="{{MEDIA_URL}}{{ project.image }}" /></a>
+				</div>
+				<div id="summary_content">	
+					<a href="{% url 'project_detail' project.id %}">{{ project.title }}</a>
+					<p>{{ project.summary }}</p>
+				</div>
+			</div>	
+			{% endifequal %}
+			{% endfor %}
+			
+		</div>		
 	{% else %}
 		<p>No projects available</p>
 	{% endif %}

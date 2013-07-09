@@ -136,7 +136,7 @@ body {
 	width: 550px;
 	padding: 20px;
 	clear: both;
-	border-bottom: 2px dashed grey;
+	border-bottom: 2px dashed #dddddd;
 	min-height: 120px;
 }
 
@@ -164,9 +164,17 @@ body {
 	padding-bottom: 20px;
 }
 
+#projects-category-title {
+	padding-top: 20px;
+}
+
+#projects-category-title h3 {
+	font-size: 16px;
+}
+
 #post_summary{
 	padding: 20px 0px 20px 0px;
-	border-bottom: 2px dashed grey;
+	border-bottom: 2px dashed #dddddd;
 }
 
 footer {
